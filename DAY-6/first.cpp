@@ -1,6 +1,7 @@
 // WAP to find if the given number is odd or even constraint 
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 int main(){
@@ -12,6 +13,6 @@ int main(){
     }else{
         cout << "EVEN"<< endl;
     }
-
+// 12500 -> Calculate the currency
     return 0;
 }

@@ -4,5 +4,6 @@ amount = int(input("Enter Amount to be paid : "))
 
 for C in notes:
     count = amount//C
-    print("Note Value : ", C,'\tCount : ',count)
+    if count != 0:
+        print("Note Value : ", C,'\tCount : ',count)
     amount = amount%C

@@ -66,5 +66,9 @@ int main(){
         }
         j += 1;
     }
+    /*
+        while is the entry controlled
+        do while is exit controlled
+    */
     return 0;
 }

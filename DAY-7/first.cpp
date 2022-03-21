@@ -67,8 +67,15 @@ int main(){
         j += 1;
     }
     /*
+        Syntax of for and while:
+            1. Initialization
+            2. Check Condition
+            3. Body of Loop
+            4. Update Counter
+
         while is the entry controlled
         do while is exit controlled
+        do while executes at least once
     */
     return 0;
 }

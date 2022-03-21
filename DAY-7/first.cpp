@@ -34,5 +34,37 @@ int main(){
         cout << "Invalid Choice";
         break;
     }
+    int res = 0;
+
+    cout << endl;
+
+    while (res <=100){
+        if (!(res %4 == 0)){
+            cout << res << endl;
+        }
+        res +=2;
+    }
+    // Input 10 nums and sum them
+
+    int i, nums;
+    int sum = 0;
+    for ( i = 1; i <= 10; i++){
+        cout << "Enter a number: ";
+        cin >> nums;
+        sum += nums;
+    }
+    cout << sum << endl;
+
+    //  show numbers from 1 to 100 and skip multiples of 4 and 5
+
+    int j;
+    j = 1;
+
+    while (j <= 100){
+        if (!(j % 4 == 0 || j % 5 == 0)){
+            cout << j << endl;
+        }
+        j += 1;
+    }
     return 0;
 }

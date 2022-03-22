@@ -31,8 +31,10 @@ int main(){
             4. Each element has the same name with different index numbers
             5. Index number varies from lower bound to upper bound
             6. Total Memory occupy = total no elements * size of element
-        Declaration:
+        Declaration 1-D array:
             <datatype> <name of array>[size of array];
+        Declaration 2-D array:
+            <datatype> <name of array>[1st dim // rows] [2nd dim // cols]
     */
     return 0;
 }

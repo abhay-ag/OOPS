@@ -81,5 +81,33 @@ int main(){
         }
         cout << endl;
     }
+
+    // Program 5 --> Diagonal elements are 1 or not
+
+    int diag[3][3];
+    int flag = 0;
+
+    for ( i = 0; i<3; i++){
+        for( j =0 ; j <3 ; j++){
+            cout << "Enter the elements of 2-D Array: ";
+            cin >> diag[i][j];
+        }
+    }
+    for (i = 0; i < 3 ; i++){
+        for(j = 0; j < 3; j++){
+            if(i == j){
+                if(diag[i][j] == 1){
+                    flag = 1;
+                }
+                else flag = 0;
+            }
+        }
+    }
+    if (flag){
+        cout << "Every Element is 1."<<endl;
+    }
+    else{
+        cout << "Every element is not 1."<<endl;
+    }
     return 0;
 }

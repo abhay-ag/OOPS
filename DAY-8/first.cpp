@@ -36,5 +36,19 @@ int main(){
         Declaration 2-D array:
             <datatype> <name of array>[1st dim // rows] [2nd dim // cols]
     */
+
+    int mat[3][4];
+    int a, b;
+    for (a = 0 ; a < 3; a++){
+        for (b = 0 ; b < 4; b++){
+            cin >> mat[a][b];
+        }
+    }
+    for (a = 0 ; a < 3; a++){
+        for (b = 0 ; b < 4; b++){
+            cout << mat[a][b] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }

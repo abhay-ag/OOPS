@@ -57,5 +57,29 @@ int main(){
         }
     }
     cout << "Count of even nos in array is: " << count << endl;
+
+    // Program 4 --> adding matrix
+
+    int arr2d[3][3];
+    int arrSum[3][3];
+
+    for (i = 0; i < 3 ; i++){
+        for(j = 0; j < 3; j++){
+            cout << "Enter the element of 2-D Array: ";
+            cin >> arr2d[i][j];
+        }
+    }
+
+    for (i = 0; i < 3 ; i++){
+        for(j = 0; j < 3; j++){
+            arrSum[i][j] = arr2d[i][j] + arr2d[i][j];
+        }
+    }
+    for (i = 0; i < 3 ; i++){
+        for(j = 0; j < 3; j++){
+            cout << arrSum[i][j] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }

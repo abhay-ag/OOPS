@@ -12,5 +12,16 @@ int main(){
             }
         }
     }
+    int k, l;
+    cout << "WHILE LOOP" << endl;
+    k =1;
+    while (k<=5){
+        l = 1;
+        while (l<=10){
+            cout << k << "\t" << l << endl;
+            l++;
+        }
+        k++;
+    }
     return 0;
 }

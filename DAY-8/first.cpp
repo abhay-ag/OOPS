@@ -23,5 +23,16 @@ int main(){
         }
         k++;
     }
+    /*
+        ARRAYS:
+            1. Collection of Elements
+            2. Homogeneous
+            3. Occupies continuous memory
+            4. Each element has the same name with different index numbers
+            5. Index number varies from lower bound to upper bound
+            6. Total Memory occupy = total no elements * size of element
+        Declaration:
+            <datatype> <name of array>[size of array];
+    */
     return 0;
 }

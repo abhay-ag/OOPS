@@ -4,6 +4,7 @@ using namespace std;
 
 int main(){
     // Sorting an array
+    // Selection Sort
     int arr[6] = {5,3,2,4,1,5};
 
     int i,j,third;

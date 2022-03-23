@@ -19,5 +19,15 @@ int main(){
         Declaration of Pointer Variable
             <datatype> * <name of variable>
     */
+    int *ptr , *ptr1;
+    // The Datatype of pointer is the only datatype it can store ||  In this case it can store only int datatype
+
+    /*
+        & ==> ampersand ==> Address of 
+    */
+
+    ptr = &a;
+    ptr1 = &b;
+
     return 0;
 }

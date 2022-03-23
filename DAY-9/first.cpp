@@ -32,5 +32,10 @@ int main(){
 
     ptr = &a;       //Assigning the address of a to ptr
     ptr1 = &b;
+
+    int c;
+    c = *ptr;
+    cout << c << endl;
+    
     return 0;
 }

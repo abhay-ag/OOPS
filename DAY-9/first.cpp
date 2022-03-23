@@ -47,7 +47,7 @@ int main(){
     cout << p << " " << *p << " " << ch << endl;
 
     // Advanced Pointers
-    // Size of a pointer variable is always the same == 8;
+    // Size of a pointer variable is always the same == depends on the system configuration;
 
     int *pi;
     int i;

@@ -56,5 +56,17 @@ int main(){
 
     cout << sizeof(p) << " " << sizeof(pi)<< endl;
 
+    // NESTED POINTERS
+
+    /*
+        suppose:
+            int a; 
+            int *ptr;
+            int  **ptr1;
+
+            ptr = &a;       // Pointer to an integer
+            ptr1 = &ptr;    // Pointer to a pointer
+    */
+
     return 0;
 }

@@ -24,10 +24,13 @@ int main(){
 
     /*
         & ==> ampersand ==> Address of 
+
+        * ==> Purposes
+            1. To declare a pointer variable
+            2. Dereferencing [VALUE AT] => Accessing the value stored in the memory address
     */
 
-    ptr = &a;
+    ptr = &a;       //Assigning the address of a to ptr
     ptr1 = &b;
-
     return 0;
 }

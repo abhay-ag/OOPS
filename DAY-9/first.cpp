@@ -36,6 +36,14 @@ int main(){
     int c;
     c = *ptr;
     cout << c << endl;
-    
+
+    // Practical
+
+    char ch = 'a';
+    char *p;
+
+    p = &ch;
+
+    cout << p << " " << *p << " " << ch << endl;
     return 0;
 }

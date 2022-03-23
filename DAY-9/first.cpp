@@ -45,5 +45,16 @@ int main(){
     p = &ch;
 
     cout << p << " " << *p << " " << ch << endl;
+
+    // Advanced Pointers
+    // Size of a pointer variable is always the same == 8;
+
+    int *pi;
+    int i;
+
+    pi = &i;
+
+    cout << sizeof(p) << " " << sizeof(pi)<< endl;
+
     return 0;
 }

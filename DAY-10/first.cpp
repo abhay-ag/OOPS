@@ -33,10 +33,16 @@ int addWR(){
 
     return a+b;
 }
+// Function without return statement with parameters
+void addP(int a, int b){
+    cout << "Sum: " << a + b << endl;
+}
 int main(){
     add();                      // Function Calling
 
     int res = addWR();          // Function with return should be assigned a value
     cout << "Sum: " << res << endl;
+
+    addP(20,30);                // Parameters should be passed into the brackets
     return 0;
 }

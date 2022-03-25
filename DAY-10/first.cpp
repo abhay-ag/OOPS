@@ -12,3 +12,19 @@
     Calling of a function:
         <name of the function> ([parameters if any]);
 */
+
+#include <iostream>
+
+using namespace std;
+
+void add(){                     // Function Definition
+    int a, b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    cout << "Sum: " << a+b << endl;
+}
+int main(){
+    add();                      // Function Calling
+    return 0;
+}

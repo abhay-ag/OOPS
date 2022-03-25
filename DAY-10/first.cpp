@@ -17,6 +17,7 @@
 
 using namespace std;
 
+// Function without return without parameter
 void add(){                     // Function Definition
     int a, b;
     cout << "Enter two numbers: ";
@@ -24,7 +25,18 @@ void add(){                     // Function Definition
 
     cout << "Sum: " << a+b << endl;
 }
+// Function with return statement without parameter
+int addWR(){
+    int a,b;
+    cout << "Enter two number: ";
+    cin >> a >>b;
+
+    return a+b;
+}
 int main(){
     add();                      // Function Calling
+
+    int res = addWR();          // Function with return should be assigned a value
+    cout << "Sum: " << res << endl;
     return 0;
 }

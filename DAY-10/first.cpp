@@ -37,6 +37,10 @@ int addWR(){
 void addP(int a, int b){
     cout << "Sum: " << a + b << endl;
 }
+// Function with return statement and paramters
+int addPR(int a, int b){
+    return a + b;
+}
 int main(){
     add();                      // Function Calling
 
@@ -44,5 +48,8 @@ int main(){
     cout << "Sum: " << res << endl;
 
     addP(20,30);                // Parameters should be passed into the brackets
+
+    int resP = addPR(23,32);
+    cout << "Sum: " << resP << endl;
     return 0;
 }

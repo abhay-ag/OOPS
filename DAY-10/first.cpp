@@ -26,30 +26,31 @@ void add(){                     // Function Definition
     cout << "Sum: " << a+b << endl;
 }
 // Function with return statement without parameter
-int addWR(){
+int sub(){
     int a,b;
     cout << "Enter two number: ";
     cin >> a >>b;
 
-    return a+b;
+    return a-b;
 }
 // Function without return statement with parameters
-void addP(int a, int b){
-    cout << "Sum: " << a + b << endl;
+void divide(int a, int b){
+    int c = a/b;
+    cout << "Fraction: " << c << endl;
 }
 // Function with return statement and paramters
-int addPR(int a, int b){
-    return a + b;
+int mul(int a, int b){
+    return a * b;
 }
 int main(){
     add();                      // Function Calling
 
-    int res = addWR();          // Function with return should be assigned a value
-    cout << "Sum: " << res << endl;
+    int res = sub();          // Function with return should be assigned a value
+    cout << "Difference: " << res << endl;
 
-    addP(20,30);                // Parameters should be passed into the brackets
+    divide(30,20);                // Parameters should be passed into the brackets
 
-    int resP = addPR(23,32);
-    cout << "Sum: " << resP << endl;
+    int resP = mul(23,32);
+    cout << "Product: " << resP << endl;
     return 0;
 }

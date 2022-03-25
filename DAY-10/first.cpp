@@ -7,6 +7,8 @@
     Definition of a function:  
         <return type> <name of the function> ([parameters with data types if any]){
             [body];
-            return; // If a function returns any value then use a return type else use void;
+            return;                 // If a function returns any value then use a return type else use void;
         }
+    Calling of a function:
+        <name of the function> ([parameters if any]);
 */

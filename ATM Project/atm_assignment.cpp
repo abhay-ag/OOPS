@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
-char menuInput;
+char menuInput, mainInput;
+vector<int> balance;
 void printIntroMenu();
 void printMainMenu();
 void start();
@@ -39,4 +41,11 @@ void printIntroMenu(){
             printIntroMenu();
             break;
     }
+}
+
+void printMainMenu(){
+    cout << "d -> Deposit Money\nw -> Withdraw Money\nr -> Request Money\nq -> Quit\n\n> " ;
+    cin >> mainInput;
+
+    
 }

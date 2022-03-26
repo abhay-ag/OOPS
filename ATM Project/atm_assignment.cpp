@@ -56,8 +56,9 @@ void login(){
         createAccount();
     }
     string uname, paswd, dummy;
+    bool found = false;
     for(int i = 0; i < id.size(); i ++){
-        
+
     }
 }
 

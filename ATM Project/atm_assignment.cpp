@@ -41,10 +41,12 @@ void printIntroMenu(char menuInput){
         case 'q':
             exit(0);
             break;
-        // default:
-        //     cout << "Please enter correct input!!! \n" << endl;
-        //     printIntroMenu();
-        //     break;
+        default:
+            cout << "Please enter correct input!!! \n" << endl;
+            cout << "l -> Login\nc -> Create New Account\nq -> Quit\n\n> " ;
+            cin >> menuInput;
+            printIntroMenu(menuInput);
+            break;
     }
 }
 
@@ -52,6 +54,10 @@ void login(){
     if (id.size() == 0 && password.size()  == 0){
         cout << "Currently we have no accounts!! Please create an accout!" << endl << endl;
         createAccount();
+    }
+    string uname, paswd, dummy;
+    for(int i = 0; i < id.size(); i ++){
+        
     }
 }
 

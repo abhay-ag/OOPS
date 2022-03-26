@@ -10,7 +10,7 @@ char menuInput;
 char mainInput;
 vector<string> id;
 vector<string> password;
-void printIntroMenu(char menuInput);
+void printIntroMenu();
 void printMainMenu();
 void start();
 void login();
@@ -25,12 +25,12 @@ int main(){
 }
 void start(){
     cout << "Please Select an option from the menu below: " << endl;
-    cout << "l -> Login\nc -> Create New Account\nq -> Quit\n\n> " ;
-    cin >> menuInput;
-    printIntroMenu(menuInput);
+    printIntroMenu();
 }
 
-void printIntroMenu(char menuInput){
+void printIntroMenu(){
+    cout << "l -> Login\nc -> Create New Account\nq -> Quit\n\n> " ;
+    cin >> menuInput;
     switch (menuInput){
         case 'l':
             login();
@@ -43,22 +43,50 @@ void printIntroMenu(char menuInput){
             break;
         default:
             cout << "Please enter correct input!!! \n" << endl;
-            cout << "l -> Login\nc -> Create New Account\nq -> Quit\n\n> " ;
-            cin >> menuInput;
-            printIntroMenu(menuInput);
+            printIntroMenu();
             break;
     }
 }
 
 void login(){
+    bool found = false;
+    string uname, paswd, dummy;
+    int index;
     if (id.size() == 0 && password.size()  == 0){
-        cout << "Currently we have no accounts!! Please create an accout!" << endl << endl;
+        cout << "Currently we have no accounts!! Please create an account!" << endl << endl;
         createAccount();
     }
-    string uname, paswd, dummy;
-    bool found = false;
-    for(int i = 0; i < id.size(); i ++){
+    else{
+        getline(cin, dummy);
+        cout << endl;
+        cout << "Enter your User Name: ";
+        getline(cin, uname);
+        cout << endl;
 
+        for(int i = 0; i < id.size(); i ++){
+            if(uname == id[i]){
+                found = true;
+                index = i;
+                break;
+            }
+        }
+        if(found){
+            cout << "Enter your Password: ";
+            getline(cin, paswd);
+            if(password[index] == paswd){
+                cout << endl;
+                cout << "****** LOGIN SUCCESSFULL ******" << endl;
+            }
+            else{
+                cout << endl;
+                cout << "ERROR!!! PLEASE START AGAIN" << endl;
+                printIntroMenu();
+            }
+        }
+        else{
+            cout << "No such user exists!! Please Register!" << endl << endl;
+            printIntroMenu();
+        }
     }
 }
 
@@ -83,11 +111,8 @@ void createAccount(){
     addData(uname, paswd);
 
     cout << "Thank You! Your account has been created!" << endl << endl;
-    
-    cout << "l -> Login\nc -> Create New Account\nq -> Quit\n\n> " ;
-    cin >> menuInput;
 
-    printIntroMenu(menuInput);
+    printIntroMenu();
 }
 
 void printMainMenu(){

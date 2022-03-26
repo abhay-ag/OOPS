@@ -3,6 +3,8 @@
 #include <vector>
 #include <algorithm>
 
+// https://stackoverflow.com/questions/5131647/why-would-we-call-cin-clear-and-cin-ignore-after-reading-input
+
 using namespace std;
 char menuInput;
 char mainInput;

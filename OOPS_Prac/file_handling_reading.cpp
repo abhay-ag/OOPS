@@ -13,11 +13,11 @@ int main(){
     string firstname;
     string lastname;
 
-    while (ip.good()){
+    while (!ip.eof()){
         getline(ip, firstname, ',');
         getline(ip, lastname, '\n');
 
-        cout << "Name: " << firstname << " "<< lastname << endl;
+        cout << "Name: " << firstname << lastname << endl;
     }
     ip.close();
     return 0;

@@ -8,9 +8,8 @@
 using namespace std;
 
 int main(){
-    ofstream mef;
+    ofstream mef;               // Opening a file if it doesn't exist it will be created
     mef.open("test.csv");
-    mef << "First Name, Last Name, Middle Name" << endl;
-    mef << "Abhay, Aggarwal, _"  << endl;
-    mef.close();
+    mef << "Abhay, Aggarwal"  << endl;      // Values are separated by commas, and a new line character is inserted at the end to enter a new row in the csv file
+    mef.close();                // Closing a file is necessary and has to be donee ohterwise it results in error in the future
 }

@@ -11,7 +11,7 @@ char mainInput;
 vector<string> id;
 vector<string> password;
 void printIntroMenu();
-void printMainMenu();
+void printMainMenu(int index, string uname);
 void start();
 void login();
 void createAccount();
@@ -77,6 +77,7 @@ void login(){
             if(password[index] == paswd){
                 cout << endl;
                 cout << "****** LOGIN SUCCESSFULL ******" << endl << endl;
+                printMainMenu(index, uname);
             }
             else{
                 cout << endl;
@@ -117,7 +118,25 @@ void createAccount(){
     printIntroMenu();
 }
 
-void printMainMenu(){
+void printMainMenu(int index, string uname){
+    cout << endl;
+    cout << "--------Hello, " << uname << "! Please select from options below --------" << endl << endl;
     cout << "d -> Deposit Money\nw -> Withdraw Money\nr -> Request Money\nq -> Quit\n\n> " ;
     cin >> mainInput;
+
+    switch (mainInput){
+        case 'd':
+            break;
+        case 'w':
+            break;
+        case 'r':
+            break;
+        case 'q':
+            exit(0);
+            break;
+        default:
+            cout << endl;
+            cout << "Wrong Choice!! Please Enter Again!" << endl;
+            printMainMenu(index, uname);
+    }
 }

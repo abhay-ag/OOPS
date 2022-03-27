@@ -148,7 +148,7 @@ void printMainMenu(int index, string uname){
             request(index, uname);
             break;
         case 'q':
-            exit(0);
+            printIntroMenu();
             break;
         default:
             cout << endl;

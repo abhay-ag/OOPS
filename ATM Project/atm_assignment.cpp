@@ -53,7 +53,8 @@ void login(){
     string uname, paswd, dummy;
     int index;
     if (id.size() == 0 && password.size()  == 0){
-        cout << "Currently we have no accounts!! Please create an account!" << endl << endl;
+        cout << endl;
+        cout << "Currently we have no accounts!! Please create an account!" << endl;
         createAccount();
     }
     else{
@@ -75,11 +76,11 @@ void login(){
             getline(cin, paswd);
             if(password[index] == paswd){
                 cout << endl;
-                cout << "****** LOGIN SUCCESSFULL ******" << endl;
+                cout << "****** LOGIN SUCCESSFULL ******" << endl << endl;
             }
             else{
                 cout << endl;
-                cout << "ERROR!!! PLEASE START AGAIN" << endl;
+                cout << "ERROR!!! PLEASE START AGAIN" << endl << endl;
                 printIntroMenu();
             }
         }
@@ -100,6 +101,7 @@ void addData(string name, string pass){
 void createAccount(){
     string uname, paswd, dummy;
     getline(cin, dummy);
+    cout << endl;
     cout << "Enter user name [spaces get converted to underscore]: ";
     getline(cin, uname);
 

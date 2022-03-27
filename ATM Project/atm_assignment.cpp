@@ -277,6 +277,10 @@ void withdraw(int index, string uname){
         while (!(wdMoney <= bal.at(index)))
         {
             if(i == 2){
+                cout << endl;
+                cout << "Sorry, invalid inputs recieved too many times! Start Again"<< endl;
+                sleep(1);
+                printMainMenu(index, uname);
                 break;
             }
             cout << endl;

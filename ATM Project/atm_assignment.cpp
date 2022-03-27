@@ -148,7 +148,7 @@ void printMainMenu(int index, string uname){
             request(index, uname);
             break;
         case 'q':
-            cout << "Thank you, " << uname << "!" << endl;
+            cout << "Thank you, " << uname << "!" << endl << endl;
             sleep(1);
             printIntroMenu();
             break;

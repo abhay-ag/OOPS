@@ -10,12 +10,16 @@ char menuInput;
 char mainInput;
 vector<string> id;
 vector<string> password;
+vector<int> bal(9999, 0);
 void printIntroMenu();
 void printMainMenu(int index, string uname);
 void start();
 void login();
 void createAccount();
 void addData(string name, string pass);
+void deposit(int index, string uname);
+void withdraw(int index, string uname);
+void request(int index, string uname);
 
 int main(){
     cout << "Hello, User!! Welcome to this ATM Project!" << endl;
@@ -121,15 +125,18 @@ void createAccount(){
 void printMainMenu(int index, string uname){
     cout << endl;
     cout << "--------Hello, " << uname << "! Please select from options below --------" << endl << endl;
-    cout << "d -> Deposit Money\nw -> Withdraw Money\nr -> Request Money\nq -> Quit\n\n> " ;
+    cout << "d -> Deposit Money\nw -> Withdraw Money\nr -> Request Balance\nq -> Quit\n\n> " ;
     cin >> mainInput;
 
     switch (mainInput){
         case 'd':
+            deposit(index, uname);
             break;
         case 'w':
+            withdraw(index, uname);
             break;
         case 'r':
+            request(index, uname);
             break;
         case 'q':
             exit(0);
@@ -138,5 +145,50 @@ void printMainMenu(int index, string uname){
             cout << endl;
             cout << "Wrong Choice!! Please Enter Again!" << endl;
             printMainMenu(index, uname);
+    }
+}
+
+void deposit(int index, string uname){
+    cout << "Working";
+
+}
+
+void withdraw(int index, string uname){
+    int wdMoney;
+    /*try
+    {
+        cout << bal.at(index);
+    }
+    catch(const std::out_of_range& e)
+    {
+        cout << endl;
+        cout << "No balance!! Please deposit some money first!" << endl;
+
+    }*/
+    // The vector.at() function throws an  std::out_of_range exception. This try catch block handles it.
+
+    if(bal.at(index) == 0){
+        cout << endl;
+        cout << "Your balance is 0! You can't withdraw money right now!" << endl;
+        deposit(index, uname);
+    }
+    else{
+        cout << endl;
+        cout << "Enter amount to be withdrawn: ";
+        cin >> wdMoney;
+        cin.clear();
+    }
+}
+
+void request(int index, string uname){
+    if(bal.at(index) == 0){
+        cout << endl;
+        cout << "Your balance is 0!" << endl;
+        printMainMenu(index, uname);
+    }
+    else{
+        cout << endl;
+        cout << "Dear, "<< uname << " your balance is "<< bal.at(index); 
+        printMainMenu(index, uname);
     }
 }

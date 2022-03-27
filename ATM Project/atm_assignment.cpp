@@ -1,3 +1,8 @@
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
 #include <iostream>
 #include <string>
 #include <vector>
@@ -58,6 +63,7 @@ void login(){
     int index;
     if (id.size() == 0 && password.size()  == 0){
         cout << endl;
+        sleep(1);
         cout << "Currently we have no accounts!! Please create an account!" << endl;
         createAccount();
     }
@@ -80,11 +86,13 @@ void login(){
             getline(cin, paswd);
             if(password[index] == paswd){
                 cout << endl;
+                sleep(1);
                 cout << "****** LOGIN SUCCESSFULL ******" << endl << endl;
                 printMainMenu(index, uname);
             }
             else{
                 cout << endl;
+                sleep(1);
                 cout << "ERROR!!! PLEASE START AGAIN" << endl << endl;
                 printIntroMenu();
             }
@@ -116,7 +124,8 @@ void createAccount(){
     getline(cin, paswd);
 
     addData(uname, paswd);
-
+    sleep(1);
+    cout << endl;
     cout << "Thank You! Your account has been created!" << endl << endl;
 
     printIntroMenu();
@@ -149,8 +158,21 @@ void printMainMenu(int index, string uname){
 }
 
 void deposit(int index, string uname){
-    cout << "Working";
+    cout << endl;
+    int dpMoney;
 
+    cout << "Enter the amount to be depostied: $";
+    cin >> dpMoney;
+
+    bal.at(index) += dpMoney;
+    sleep(1);
+    cout << endl;
+    cout << "Deposited Successfully!!" << endl << endl;
+    cout << "------------------------" << endl;
+
+    sleep(1);
+
+    printMainMenu(index, uname);
 }
 
 void withdraw(int index, string uname){
@@ -165,30 +187,49 @@ void withdraw(int index, string uname){
         cout << "No balance!! Please deposit some money first!" << endl;
 
     }*/
-    // The vector.at() function throws an  std::out_of_range exception. This try catch block handles it.
+    // The vector.at() function throws an  std::out_of_range exception if there is null value at that particular index. This try catch block handles it.
 
     if(bal.at(index) == 0){
         cout << endl;
-        cout << "Your balance is 0! You can't withdraw money right now!" << endl;
-        deposit(index, uname);
+        cout << "Your balance is $0! You can't withdraw money right now!" << endl;
+        sleep(1);
+        printMainMenu(index, uname);
     }
     else{
         cout << endl;
-        cout << "Enter amount to be withdrawn: ";
+        cout << "Enter amount to be withdrawn: $";
         cin >> wdMoney;
+        while (!(wdMoney <= bal.at(index)))
+        {
+            cout << endl;
+            sleep(1);
+            cout << "You don't have sufficient balance!" << endl << endl;
+            cout << "Enter amount to be withdrawn: $";
+            cin >> wdMoney;
+        }
+        
         cin.clear();
+        bal.at(index) -= wdMoney;
+        sleep(1);
+        cout << endl;
+        cout << "Transaction Successfull!!" << endl << endl;
+        cout << "--------------------------" << endl;
+        sleep(1);
+        printMainMenu(index, uname);
     }
 }
 
 void request(int index, string uname){
     if(bal.at(index) == 0){
         cout << endl;
-        cout << "Your balance is 0!" << endl;
+        cout << "Your balance is $0!" << endl;
+        sleep(1);
         printMainMenu(index, uname);
     }
     else{
         cout << endl;
-        cout << "Dear, "<< uname << " your balance is "<< bal.at(index); 
+        cout << "Dear, "<< uname << " your balance is: $"<< bal.at(index) << endl; 
+        sleep(1);
         printMainMenu(index, uname);
     }
 }

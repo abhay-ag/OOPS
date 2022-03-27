@@ -1,8 +1,3 @@
-#ifdef _WIN32
-#include <Windows.h>
-#else
-#include <unistd.h>
-#endif
 #include <iostream>
 #include <string>
 #include <vector>
@@ -103,7 +98,6 @@ void login(){
     int index;
     if (id.size() == 0 && password.size()  == 0){
         cout << endl;
-        Sleep(1000);
         cout << "Currently we have no accounts!! Please create an account!" << endl;
         printIntroMenu();
     }
@@ -126,13 +120,11 @@ void login(){
             getline(cin, paswd);
             if(password[index] == paswd){
                 cout << endl;
-                Sleep(1000);
                 cout << "****** LOGIN SUCCESSFULL ******" << endl << endl;
                 printMainMenu(index, uname);
             }
             else{
                 cout << endl;
-                Sleep(1000);
                 cout << "ERROR!!! PLEASE START AGAIN" << endl << endl;
                 printIntroMenu();
             }
@@ -176,7 +168,6 @@ void createAccount(){
     getline(cin, paswd);
 
     addData(uname, paswd);
-    Sleep(1000);
     cout << endl;
     cout << "Thank You! Your account has been created!" << endl << endl;
 
@@ -208,7 +199,6 @@ void printMainMenu(int index, string uname){
             break;
         case 'q':
             cout << "Thank you, " << uname << "!" << endl << endl;
-            Sleep(1000);
             printIntroMenu();
             break;
         default:
@@ -231,12 +221,10 @@ void deposit(int index, string uname){
     cin >> dpMoney;
 
     bal.at(index) += dpMoney;
-    Sleep(1000);
     cout << endl;
     cout << "Deposited Successfully!!" << endl << endl;
     cout << "------------------------" << endl;
 
-    Sleep(1000);
 
     printMainMenu(index, uname);
 }
@@ -266,7 +254,6 @@ void withdraw(int index, string uname){
     if(bal.at(index) == 0){
         cout << endl;
         cout << "Your balance is $0! You can't withdraw money right now!" << endl;
-        Sleep(1000);
         printMainMenu(index, uname);
     }
     else{
@@ -279,12 +266,10 @@ void withdraw(int index, string uname){
             if(i == 2){
                 cout << endl;
                 cout << "Sorry, invalid inputs recieved too many times! Start Again"<< endl;
-                Sleep(1000);
                 printMainMenu(index, uname);
                 break;
             }
             cout << endl;
-            Sleep(1000);
             cout << "You don't have sufficient balance!" << endl << endl;
             cout << "Enter amount to be withdrawn: $";
             cin >> wdMoney;
@@ -293,11 +278,9 @@ void withdraw(int index, string uname){
         
         cin.clear();
         bal.at(index) -= wdMoney;
-        Sleep(1000);
         cout << endl;
         cout << "Transaction Successfull!!" << endl << endl;
         cout << "--------------------------" << endl;
-        Sleep(1000);
         printMainMenu(index, uname);
     }
 }
@@ -310,13 +293,11 @@ void request(int index, string uname){
     if(bal.at(index) == 0){
         cout << endl;
         cout << "Your balance is $0!" << endl;
-        Sleep(1000);
         printMainMenu(index, uname);
     }
     else{
         cout << endl;
         cout << "Dear, "<< uname << " your balance is: $"<< bal.at(index) << endl; 
-        Sleep(1000);
         printMainMenu(index, uname);
     }
 }

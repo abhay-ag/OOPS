@@ -25,6 +25,10 @@ void swapRefernce(int *ptr1, int *ptr2){
     cout << "T -> is: " << *ptr1 << '\t' << "U -> is: " << *ptr2 << endl;
 }
 
+int add(int n1, int n2, int n3 = 0, int n4 = 0){
+    return n1+n2+n3+n4;
+}
+
 int main(){
     int *ptr;
     int a = 20;
@@ -43,6 +47,14 @@ int main(){
     cout << "Before Swapping T -> is: " << t << '\t' << "U -> is: " << u << endl;
     swapRefernce(&t, &u);                                                           // This changes the variable in the main function also
     cout << "After Swapping T -> is: " << t << '\t' << "U -> is: " << u << endl;
+
+    // Default Parameters
+
+    int res2 = add(1,3);
+    int res3 = add(1,2,2);
+    int res4 = add(1,2,3,1);
+
+    cout << "Sum of two: " << res2 << "\nSum of three: " << res3 << "\nSum of four: " << res4 << endl;
     return 0;
 }
 
@@ -60,4 +72,14 @@ int main(){
         inline <return type> <function name> ([params if any]){
             // body
         }
+*/
+
+/*
+    Default Parameters:
+        To make a functino dynamic so that it can accept any numbers of inputs  specified;
+
+        In the function add:
+            int n3  = 0; is the default parameter
+
+        All the default paramters should be declared after the mandatory parameters.
 */

@@ -31,7 +31,11 @@ int main(){
     ptr = &a;
     cout << ptr << endl;
 
+    // Call by Value
+
     swapValue(35,32);
+
+    // Call by Reference
 
     int t,u;
     cout << "Enter two Numbers: ";
@@ -47,5 +51,13 @@ int main(){
 
         <return type> <function name> ([arguements with declaration like int *ptr]){
             //body
+        }
+
+    The switching of control from one function to another is called context switching.
+    To Avoid context switching we use inline functions
+
+    Definition of an inline function:
+        inline <return type> <function name> ([params if any]){
+            // body
         }
 */

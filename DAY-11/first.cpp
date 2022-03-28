@@ -15,7 +15,14 @@ void swapValue(int a, int b){
     int t = a;
     a = b; 
     b = t;
-    cout << "Swapped nos. are : " << a << b << endl;
+    cout << "Swapped nos. are : " << a << " " << b << endl;
+}
+
+void swapRefernce(int *ptr1, int *ptr2){
+    int t = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = t;
+    cout << "T -> is: " << *ptr1 << '\t' << "U -> is: " << *ptr2 << endl;
 }
 
 int main(){
@@ -25,6 +32,13 @@ int main(){
     cout << ptr << endl;
 
     swapValue(35,32);
+
+    int t,u;
+    cout << "Enter two Numbers: ";
+    cin >> t >> u;
+    cout << "Before Swapping T -> is: " << t << '\t' << "U -> is: " << u << endl;
+    swapRefernce(&t, &u);                                                           // This changes the variable in the main function also
+    cout << "After Swapping T -> is: " << t << '\t' << "U -> is: " << u << endl;
     return 0;
 }
 

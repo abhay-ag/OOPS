@@ -6,6 +6,21 @@ void func(int &b){
     b = 20;
 }
 
+/*
+    Function Overloading:
+        1. not allowed in c
+        2. we can have different functions with same name
+
+    The way it works:
+        1. Compares the number of parameters
+        2. Data type of parameters
+
+    EG:
+        sum(int a, int b)
+        sum(int a, int b, int c)
+        sum(float a, float b)
+*/
+
 int main(){
     int x  =10;
     cout << x << endl;

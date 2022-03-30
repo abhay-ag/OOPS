@@ -1,10 +1,10 @@
 /*
     Functions:
         1. Call by value
-        2. Call by refernce
+        2. Call by pointer
 
     Call by Value --> add();
-    Call by refernce --> passing the refernce of the variable into the function
+    Call by pointer --> passing the pointer of the variable into the function
 */
 
 #include <iostream>
@@ -18,7 +18,7 @@ void swapValue(int a, int b){
     cout << "Swapped nos. are : " << a << " " << b << endl;
 }
 
-void swapRefernce(int *ptr1, int *ptr2){
+void swappointer(int *ptr1, int *ptr2){
     int t = *ptr1;
     *ptr1 = *ptr2;
     *ptr2 = t;
@@ -39,13 +39,13 @@ int main(){
 
     swapValue(35,32);
 
-    // Call by Reference
+    // Call by Pointer
 
     int t,u;
     cout << "Enter two Numbers: ";
     cin >> t >> u;
     cout << "Before Swapping T -> is: " << t << '\t' << "U -> is: " << u << endl;
-    swapRefernce(&t, &u);                                                           // This changes the variable in the main function also
+    swappointer(&t, &u);                                                           // This changes the variable in the main function also
     cout << "After Swapping T -> is: " << t << '\t' << "U -> is: " << u << endl;
 
     // Default Parameters
@@ -59,7 +59,7 @@ int main(){
 }
 
 /*
-    Definition of a reference type funtion:
+    Definition of a pointer type funtion:
 
         <return type> <function name> ([arguements with declaration like int *ptr]){
             //body

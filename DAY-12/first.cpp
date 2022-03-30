@@ -16,8 +16,12 @@ int main(){
     p = NULL;                   // Assigning a null value to the pointer variable
     p = &j;
 
+    // p++ couts the new address with size plussed according to the datatype
+
     int i = 10;
     int &a = i;                 // To use a reference type variable we have to use initialization at the starting
+
+    // a++ updates the value to i to 11 here.
 
     return 0;
 }

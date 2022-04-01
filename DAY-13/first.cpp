@@ -47,5 +47,16 @@ int main(){
             <structure name>.data_member
     */
 
+    cout << "Enter the marks: ";
+    cin >> s1.marks;
+
+    cout << "Your Marks are: " << s1.marks << endl;
+
+    // Creating an array of abjects of a structure
+
+    student sArr[4];        // Creates an array for four student objects
+
+    sArr[0].marks;          // Marks for student 0
+
     return 0;
 }

@@ -10,10 +10,10 @@ struct student
 };
 
 int main(){
-    student sArr[5];
+    student sArr[2];
     string dummy;
     int bignum = sArr[0].marks;
-    student sortArray[5];
+    student sortArray[2];
 
     // Problem in assigning the bignum to negative infinity 
     // Solution :
@@ -22,7 +22,7 @@ int main(){
             Run the loop from 1;
         */
 
-    for (int i = 0; i < 5 ; i ++){
+    for (int i = 0; i < 2 ; i ++){
         cout << "Enter the Roll No of student: ";
         cin >> sArr[i].rollNo;
         getline(cin, dummy);
@@ -33,7 +33,7 @@ int main(){
         cout << endl;
     }
     int index = 0;
-    for (int i = 1; i < 5; i ++){
+    for (int i = 1; i < 2; i ++){
         if (sArr[i].marks > bignum){
             index = i;
             bignum = sArr[i].marks;
@@ -42,8 +42,8 @@ int main(){
     cout << "Highest Marks are of " << sArr[index].name << ", and the marks are: " << sArr[index].marks << endl;
     // Sorting array
     string nameSort;int rollSort, marksSort;
-    for(int i = 0; i < 5; i++){
-        for(int j = i+1; j < 5; j ++){
+    for(int i = 0; i < 2; i++){
+        for(int j = i+1; j < 2; j ++){
             if(sArr[i].name > sArr[j].name){
                 nameSort = sArr[i].name;
                 sArr[i].name = sArr[j].name;
@@ -74,7 +74,7 @@ int main(){
         }
     }
 
-    for(int i = 0; i < 5; i ++){
+    for(int i = 0; i < 2; i ++){
         cout << sArr[i].name << " " <<  sArr[i].rollNo << " " << sArr[i].marks << endl;
     }
     return 0;

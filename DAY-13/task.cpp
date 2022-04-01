@@ -13,6 +13,7 @@ int main(){
     student sArr[5];
     string dummy;
     int bignum = sArr[0].marks;
+    student sortArray[5];
 
     // Problem in assigning the bignum to negative infinity 
     // Solution :
@@ -39,5 +40,42 @@ int main(){
         }
     }
     cout << "Highest Marks are of " << sArr[index].name << ", and the marks are: " << sArr[index].marks << endl;
+    // Sorting array
+    string nameSort;int rollSort, marksSort;
+    for(int i = 0; i < 5; i++){
+        for(int j = i+1; j < 5; j ++){
+            if(sArr[i].name > sArr[j].name){
+                nameSort = sArr[i].name;
+                sArr[i].name = sArr[j].name;
+                sArr[j].name = nameSort;
+
+                rollSort = sArr[i].rollNo;
+                sArr[i].rollNo = sArr[j].rollNo;
+                sArr[j].rollNo = rollSort;
+
+                marksSort = sArr[i].marks;
+                sArr[i].marks = sArr[j].marks;
+                sArr[j].marks = marksSort;
+            }else if(sArr[i].name == sArr[j].name){
+                if (sArr[i].rollNo < sArr[j].rollNo){
+                    nameSort = sArr[i].name;
+                    sArr[i].name = sArr[j].name;
+                    sArr[j].name = nameSort;
+
+                    rollSort = sArr[i].rollNo;
+                    sArr[i].rollNo = sArr[j].rollNo;
+                    sArr[j].rollNo = rollSort;
+
+                    marksSort = sArr[i].marks;
+                    sArr[i].marks = sArr[j].marks;
+                    sArr[j].marks = marksSort;
+                }
+            }
+        }
+    }
+
+    for(int i = 0; i < 5; i ++){
+        cout << sArr[i].name << " " <<  sArr[i].rollNo << " " << sArr[i].marks << endl;
+    }
     return 0;
 }

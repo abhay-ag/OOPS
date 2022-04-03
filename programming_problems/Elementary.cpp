@@ -38,5 +38,14 @@ int main(){
     }else if(choice == '*'){
         cout << "Product: " << prod << endl;
     }
+
+    // Problem -3 ==> Print tables upto 12
+
+    for(int i = 1; i <= 12; i ++){
+        for (int j = 1; j<=10;j++){
+            cout << i << " X " << j << " = " << i*j << endl;
+        }
+        cout << endl;
+    }
     return 0;
 }

@@ -23,7 +23,25 @@ int main(){
         }
     }
     for(int i = 0; i < 10; i ++){
-        cout << arr[i] << " ";
+        cout << arr[i] << " " ;
     }
+    cout << endl;
+
+    // Program 3 ==> If an element exists in an array
+
+    int find;
+
+    cout << "Enter the number you want to find: ";
+    cin >> find;
+    bool found = false;
+    for (int i = 0; i < 10; i++){
+        if(arr[i] == find){
+            found = true;
+            break;
+        }
+    }
+    if(found){
+        cout << "Element found." << endl;
+    }else{cout << "Element not found." << endl;}
     return 0;
 }

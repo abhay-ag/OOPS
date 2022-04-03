@@ -97,7 +97,5 @@ int main(){
         }
         
     } while (guessNo != randInt);
-    
-
     return 0;
 }

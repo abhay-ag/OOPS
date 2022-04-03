@@ -63,6 +63,20 @@
 
 
 ***
-## **ADDITIONAL**
+## **ADDITIONAL Practice**
 ***
+> Follow these mini projects to better your understanding of the language
 
+> Usage of various concepts mentioned below
+
+1. `ATM Project`
+    * Use of Vectors
+    * Use of functions
+    * All basics of C++
+
+2. `OOPS_Prac`
+    * My practice for C++
+    * File handling [only for CSV files]
+
+3. `programming_problems`
+    * Various beginner -> intermediate -> advanced programmes

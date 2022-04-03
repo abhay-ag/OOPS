@@ -78,7 +78,18 @@ int main(){
     }
     cout << "Reversed String ==> " << name << endl;
 
-    // Program 7 => Sum using for loop []
+    // Program 7 => Sum using for loop, while loop
+    sum = 0;
+    for(int i = 0; i < 10; i ++){
+        sum +=  arr[i];
+    }cout << "Sum [for loop]: " << sum << endl;
+    int i = 0;
+    sum = 0;
+    while(i != 10){
+        sum += arr[i];
+        i  += 1;
+    }
+    cout << "Sum [while loop]: " << sum << endl;
 
     return 0;
 }

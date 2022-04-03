@@ -2,6 +2,14 @@
 #include <vector>
 
 using namespace std;
+
+int sumArr(int arr[], int start, int len){
+    if (start >= len)
+        return 0;
+    
+    return (arr[start] + sumArr(arr, start +1, len));
+}
+
 int main(){
     // Program 1 ==> Find the biggest in the array
     int arr[10] = {1,2,3,4,57,6,7,8,9,10};
@@ -78,7 +86,7 @@ int main(){
     }
     cout << "Reversed String ==> " << name << endl;
 
-    // Program 7 => Sum using for loop, while loop
+    // Program 7 => Sum using for loop, while loop, recursion
     sum = 0;
     for(int i = 0; i < 10; i ++){
         sum +=  arr[i];
@@ -90,6 +98,9 @@ int main(){
         i  += 1;
     }
     cout << "Sum [while loop]: " << sum << endl;
+
+    int sumRec = sumArr(arr, 0, 10);
+    cout << "Sum [recursion]: " << sumRec << endl;
 
     return 0;
 }

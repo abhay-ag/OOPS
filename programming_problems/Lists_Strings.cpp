@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 int main(){
@@ -50,14 +51,18 @@ int main(){
         cout << arr[i]<< " ";
     }cout << endl;
 
-    // Program 5 ==> Sum of an array
+    // Program 5 ==> Running total of an array
 
     int sum = 0;
+    vector<int> runSum;
 
     for (int i = 0; i < 10; i ++){
         sum += arr[i];
+        runSum.push_back(sum);
     }
-    cout << "Sum of array: " << sum << endl;
+    for (int i = 0; i < runSum.size(); i ++){
+        cout << runSum[i] << " ";
+    }cout << endl;
 
     // Program 6 ==> Reverse a string
 
@@ -72,6 +77,8 @@ int main(){
         }
     }
     cout << "Reversed String ==> " << name << endl;
+
+    // Program 7 => Sum using for loop []
 
     return 0;
 }

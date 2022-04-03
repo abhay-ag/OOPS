@@ -14,5 +14,29 @@ int main(){
         sum += i;
     }
     cout << "Sum: " << sum  << endl;
+
+    // Problem - 2 ==> Choice to multiply or sum a series of 1 to n
+
+    cout << "Enter a number: ";
+    cin >> n;
+    sum = 0;
+    int prod = 1;
+
+    char choice;
+    cout << "Choose + or *: ";
+    cin >> choice;
+
+    for(int i = 1; i <=n; i ++){
+        if(choice == '+'){
+            sum += i;
+        }else if(choice == '*'){
+            prod *=  i;
+        }
+    } 
+    if (choice == '+'){
+        cout << "Sum: " << sum <<endl;
+    }else if(choice == '*'){
+        cout << "Product: " << prod << endl;
+    }
     return 0;
 }

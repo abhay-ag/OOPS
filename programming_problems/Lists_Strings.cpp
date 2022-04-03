@@ -58,5 +58,20 @@ int main(){
         sum += arr[i];
     }
     cout << "Sum of array: " << sum << endl;
+
+    // Program 6 ==> Reverse a string
+
+    string name = "Abhay";
+    int length = name.length();
+
+    for (int i = 0; i < length; i++){
+        for (int j = i+1; j < length; j++){
+            char temp  = name[i];
+            name[i] = name[j];
+            name[j] = temp;
+        }
+    }
+    cout << "Reversed String ==> " << name << endl;
+
     return 0;
 }

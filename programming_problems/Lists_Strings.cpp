@@ -102,5 +102,25 @@ int main(){
     int sumRec = sumArr(arr, 0, 10);
     cout << "Sum [recursion]: " << sumRec << endl;
 
+    // Program 8 ==> concat two arrays
+
+    int arr1[10] = {1,1,1,2,34,1,2,12,123,1};
+    int arr2[10] = {2,1,2,2,11,3,2,12,121,2};
+    
+    vector<int> concat;
+
+    for (i = 0; i < 1; i ++){
+        for ( int j = 0; j < 10; j++){
+            concat.push_back(arr1[j]);
+        }
+        for( int k = 0 ; k < 10 ; k ++){
+            concat.push_back(arr2[k]);
+        }
+    }
+
+    for(i = 0; i < 20; i ++){
+        cout << concat[i] << " ";
+    }cout << endl;
+
     return 0;
 }

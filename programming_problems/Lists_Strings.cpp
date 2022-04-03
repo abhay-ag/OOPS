@@ -49,6 +49,14 @@ int main(){
     for (int i = 1; i < 10; i +=2){
         cout << arr[i]<< " ";
     }cout << endl;
-    
+
+    // Program 5 ==> Sum of an array
+
+    int sum = 0;
+
+    for (int i = 0; i < 10; i ++){
+        sum += arr[i];
+    }
+    cout << "Sum of array: " << sum << endl;
     return 0;
 }

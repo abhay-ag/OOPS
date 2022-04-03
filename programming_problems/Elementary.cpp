@@ -3,6 +3,15 @@
 
 using namespace std;
 
+bool isPrime(int n){
+    for (int i = 2; i < n; i++){
+        if(n%i == 0){
+            return false;
+        }
+    }
+    return true;
+}
+
 int main(){
     // Problem - 1 ==> Sum of number that are only multiples of 3 or 5
     int n;
@@ -46,6 +55,17 @@ int main(){
             cout << i << " X " << j << " = " << i*j << endl;
         }
         cout << endl;
+    }
+
+    // Problem -4 ==> Print many prime numbers
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    for(int i = 2; i < n; i++){
+        if(isPrime(i)){
+            cout << i << " ";
+        }
     }
     return 0;
 }

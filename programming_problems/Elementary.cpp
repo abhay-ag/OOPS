@@ -1,8 +1,11 @@
 // Assignment Link: adriann.github.io/programming_problems.html
 #include <iostream>
+#include <time.h>
+#include <vector>
 
 using namespace std;
 
+// For program 4
 bool isPrime(int n){
     for (int i = 2; i < n; i++){
         if(n%i == 0){
@@ -67,5 +70,34 @@ int main(){
             cout << i << " ";
         }
     }
+    cout << endl;
+
+    // Problem -5 ==> Make a guessing game
+    
+    srand(time(0));
+    int randInt = rand() % 10 +1;
+
+    int guessNo = 0;
+    int tries = 0;
+
+    do
+    {
+        cout << "Guess a number [1 - 10]: ";
+        cin >> guessNo;
+
+        tries += 1;
+
+        
+        if (guessNo < randInt){
+            cout << "Smaller, Please try a higher number" << endl;
+        }else if (guessNo > randInt){
+            cout << "Higher, Please try a smaller number" << endl;;
+        }else if(guessNo == randInt){
+            cout << "You guessed the number in, " << tries << " tries." << endl;
+        }
+        
+    } while (guessNo != randInt);
+    
+
     return 0;
 }

@@ -43,5 +43,12 @@ int main(){
     if(found){
         cout << "Element found." << endl;
     }else{cout << "Element not found." << endl;}
+
+    // Program 4 ==> Elements on the odd positions of array
+
+    for (int i = 1; i < 10; i +=2){
+        cout << arr[i]<< " ";
+    }cout << endl;
+    
     return 0;
 }

@@ -25,5 +25,15 @@ int main(){
         }
         cout << endl;
     }
+
+    /*
+        2-D arrays with pointers:
+            1. mat is the pointer of first(0th) 1-D array !! (mat + 1) ==> next row
+            2. *(mat + 1) ==> Pointer to an integer => 0th element of first row
+        In-General:
+            mat + i ==> address of the i-th row
+            *(mat+i) + j ==> address of j-th column of i-th row
+            *(*(mat + i) + j) ==> value at j-th column of i-th row
+    */
     return 0;
 }

@@ -18,9 +18,10 @@ int main(){
             cin >> mat[i][j];
         }
     }
+    cout << endl;
     for(int i = 0; i < 3; i++){
         for(int j = 0; j < 4; j++){
-            cout << mat[i][j] << " ";
+            cout << mat[i][j] << "\t";
         }
         cout << endl;
     }

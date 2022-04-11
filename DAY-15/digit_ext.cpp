@@ -6,7 +6,9 @@ using namespace std;
 
 void palindrome(int num, int num1);
 
-void digit(int n, int size){
+// Not using strings and string stream
+
+/*void digit(int n, int size){
     int num = n;
     string res = "";
     for(int i = 0; i < size; i++){
@@ -19,6 +21,17 @@ void digit(int n, int size){
     int numRev = 0;
     numStr >> numRev;
     palindrome(numRev, num);
+}*/
+
+void revNum(int n, int size){
+    int revNo = 0;
+    int num = n;
+    for(int i = 0; i < size; i++){
+        int rem = n %10;
+        revNo = revNo * 10 + rem;
+        n = n/10;
+    }
+    palindrome(revNo, num);
 }
 
 void palindrome(int num, int num1){
@@ -31,6 +44,7 @@ void palindrome(int num, int num1){
 }
 
 int main(){
-    digit(1234, 4);
+    // digit(1234, 4);
+    revNum(1321,4);
     return 0;
 }

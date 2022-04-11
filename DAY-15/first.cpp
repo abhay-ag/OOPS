@@ -11,7 +11,14 @@
         };
 
     Classes:
-        1. By default members are private.
+        1. By default data members are private.
+
+    syntax Classes:
+        class <class name>
+        {
+            <Access specifier> ? private : public : protected;
+            // data members + function members
+        }
 */
 #include <iostream>
 using namespace std;

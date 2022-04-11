@@ -1,9 +1,10 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
-void palindrome(string num, int num1);
+void palindrome(int num, int num1);
 
 void digit(int n, int size){
     int num = n;
@@ -13,14 +14,16 @@ void digit(int n, int size){
         n = n /10;
         res += to_string(d);
     }
-    cout << res << endl;
-    palindrome(res, num);
+    stringstream numStr(res);
+
+    int numRev = 0;
+    numStr >> numRev;
+    palindrome(numRev, num);
 }
 
-void palindrome(string num, int num1){
-    string numStr = to_string(num1);
+void palindrome(int num, int num1){
 
-    if(num == numStr){
+    if(num == num1){
         cout << "Number is palindrome" << endl;
     }else{
         cout << "Number is not palindrome" << endl;
@@ -28,6 +31,6 @@ void palindrome(string num, int num1){
 }
 
 int main(){
-    digit(1221, 4);
+    digit(1234, 4);
     return 0;
 }

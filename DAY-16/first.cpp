@@ -13,6 +13,18 @@ void func2(){
 }
 
 
+class Counter{
+    static int count;
+    public:
+    void inc(){
+        count++;
+    }
+    void display(){
+        cout << "Counter at the end: "<< count << endl;
+    }
+};
+int Counter::count = 0;
+
 class Set{
     int a, b;
     public:
@@ -41,5 +53,26 @@ int main(){
     s1.setData(10,15);
     s1.display();
     func1();
+    /*
+        Static members.
+
+        1. Different objects have the same static member.
+
+        Initialization of static members out of the class scope
+
+        <Datatype> <class name> :: <Data member name> = [value];
+    */
+
+    Counter ob1, ob2, ob3;
+
+    ob1.inc();
+    ob2.inc();
+    ob1.inc();
+    ob3.inc();
+
+    ob1.display();
+    ob2.display();
+    ob3.display();
+
     return 0;
 }

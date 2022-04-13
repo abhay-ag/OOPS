@@ -10,6 +10,10 @@ class Counter{
     int count;
 
     public:
+    Counter(){
+        cout << "I am constructor";
+        count = 0;
+    }
     void set(){
         count = 0;
     }
@@ -28,10 +32,33 @@ int main(){
     const int x = 10;
     // x = x+10;        throws an error
 
-    Counter c1;
+    const Counter c1;
 
-    c1.set();
-    c1.inc();
+    // c1.set();
+    // c1.inc();
     c1.display();
+
+    Counter c2;
+
+    c2.set();
+    c2.inc();
+    c2.display();
+
+    /*
+        Constant object:
+
+            const Counter c2;
+
+            Here:
+            1. set() and inc() both are non constant functions and display() is a constant function.
+            
+            Hence, through a constant object we can call only constant functions.
+
+        Normal object:
+
+            Counter c1;
+
+            Hence, through a normal object all types of functions and data members can be called.
+    */
     return 0;
 }

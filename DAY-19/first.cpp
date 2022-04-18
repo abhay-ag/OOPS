@@ -8,7 +8,7 @@ class Integer{
     int a,b;
 
     public:
-    friend float mean(Integer obj);     // friend made hence private members can be accessed
+    friend float mean(Integer);     // friend made hence private members can be accessed
     void setValue(int x, int y){
         a = x;
         b = y;

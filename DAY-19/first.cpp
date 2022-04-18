@@ -5,9 +5,30 @@ using namespace std;
 // Friend Functions
 
 class Integer{
-    int 
+    int a,b;
+
+    public:
+    void setValue(int x, int y){
+        a = x;
+        b = y;
+    }
 };
 
+float mean(Integer obj){
+    float r;
+    r = obj.a + obj.b /2;       // without friend function error is thrown
+    return r;
+}
+
 int main(){
+    Integer i1;
+
+    int i,j;
+    cout << "Enter two values: ";
+    cin >> i >> j;
+
+    i1.setValue(i, j);
+
+    cout << mean(i1);
     return 0;
 }

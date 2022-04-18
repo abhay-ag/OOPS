@@ -17,7 +17,7 @@ class Integer{
 
 float mean(Integer obj){
     float r;
-    r = obj.a + obj.b /2;       // without friend function error is thrown
+    r = (obj.a + obj.b) /2;       // without friend function error is thrown
     return r;
 }
 

@@ -2,10 +2,15 @@
 
 using namespace std;
 
+class B;
+
 class A{
     int a;
 
     public:
+    friend void max(A,B);
+    friend void min(A,B);
+    friend float avg(A,B);
     void setData(int i){
         a = i;
     }
@@ -15,6 +20,9 @@ class B{
     int b;
 
     public:
+    friend void max(A,B);
+    friend void min(A,B);
+    friend float avg(A, B);
     void setData(int k){
         b = k;
     }
@@ -37,7 +45,7 @@ void min(A a, B b){
 }
 
 float avg(A a, B b){
-    return (a.a + b.b)/2
+    return (a.a + b.b)/2;
 }
 
 int main() {
@@ -50,6 +58,10 @@ int main() {
 
     a1.setData(a);
     b1.setData(b);
+
+    max(a1, b1);
+    min(a1, b1);
+    cout << avg(a1, b1);
 
 
     return 0;

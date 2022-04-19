@@ -6,10 +6,12 @@ class Time{
     
     public: 
 
+    // initialized constructor with default parameters
     Time(int hour = 0, int minutes = 0, int seconds = 0){
         h = hour; m = minutes; s = seconds;
     }
 
+    // defined a function
     Time addtime(Time t1){
         Time t3;
         
@@ -17,17 +19,17 @@ class Time{
         t3.m = t1.m + m;
         t3.h = t1.h + h;
 
-        if (t3.s > 60){
+        if (t3.s > 60){     // checking for second greater than 60
             t3.s -= 60;
             t3.m += 1;
         }
         
-        if (t3.m > 60){
+        if (t3.m > 60){      // checking for minutes greater than 60
             t3.m -= 60;
             t3.h += 1;
         }
 
-        if(t3.h > 24){
+        if(t3.h > 24){      // checking for hours greater than 24
             t3.h -= 24;
         }
 
@@ -39,13 +41,13 @@ class Time{
     }
 };
 int main(){
-    Time t1(11, 26, 39), t2(14, 40, 40), t3;
+    Time t1(11, 26, 39), t2(14, 40, 40), t3;        // creating three objects
     
     t1.disp();
     t2.disp();
 
-    t3 = t1.addtime(t2);
+    t3 = t1.addtime(t2);        // calling the addtime() function
 
-    t3.disp();
+    t3.disp();      // displaying the result
     return 0;
 }

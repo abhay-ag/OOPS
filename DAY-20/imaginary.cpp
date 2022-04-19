@@ -17,6 +17,15 @@ class Complex{
         imag = i;
     }
 
+    Complex add(Complex ob1){
+        Complex c1;
+
+        c1.real = real + ob1.real;
+        c1.imag = imag + ob1.imag;
+
+        return c1;
+    }
+
     void disp() const{
         cout << real << "+" << imag << "i" << endl;
     }
@@ -35,11 +44,14 @@ int main() {
 
     Complex c1(5,7), c2(7,10), c3;
 
-    c3 = sum(c1, c2);
+    c3 = sum(c1, c2);       // using friend function
 
     c1.disp();
     c2.disp();
     c3.disp();
+
+    c1 = c1.add(c2);        // without friend function
+    c1.disp();
 
     return 0;
 }

@@ -21,9 +21,27 @@ class Hello{
     }
 };
 
+class Integer{
+    int a, b;
 
+    public: 
+    
+    // parameterized constructor
+    Integer(int i, int j){
+        a = i;
+        b = j;
+    }
+    void display() const{
+        cout << "A => " << a << " B => " << b << endl;
+    }
+};
 
 int main() {
     Hello h1;       // even without any method "Cunstructor fired" is printed onto the terminal.
+
+    Integer i1(10,20), i2(20,30);
+
+    i1.display();
+    i2.display();
     return 0;
 }

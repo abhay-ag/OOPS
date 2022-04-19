@@ -25,7 +25,12 @@ class Integer{
     int a, b;
 
     public: 
-    
+    // 0 parameter constructor
+    Integer(){
+        a = 0;
+        b = 0;
+    }
+                                            // constructor overloading
     // parameterized constructor
     Integer(int i, int j){
         a = i;
@@ -39,9 +44,10 @@ class Integer{
 int main() {
     Hello h1;       // even without any method "Cunstructor fired" is printed onto the terminal.
 
-    Integer i1(10,20), i2(20,30);
+    Integer i1(10,20), i2(20,30), i3;
 
     i1.display();
     i2.display();
+    i3.display();       // constructor overloading
     return 0;
 }

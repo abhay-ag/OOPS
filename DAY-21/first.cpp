@@ -19,10 +19,6 @@ class Point{
         x = p.x;
         y = p.y;
     }
-    // destructor
-    ~Point(){
-        cout << "Program ended." << endl;
-    }
     void set(int i, int j){
         x = i;
         y = j;
@@ -43,6 +39,21 @@ class Point{
         }
 */
 
+class Example{
+    public:
+
+    Example(){
+        cout << "Constructor"<< endl;
+    }
+    ~Example(){
+        cout << "Destructor" << endl;
+    }
+};
+
+void f1(){
+    cout << "I am in F1" << endl;
+    Example e2;
+}
 int main(){
     Point p1;
 
@@ -52,5 +63,12 @@ int main(){
 
     p1.disp();
     p2.disp();
+
+    // destructor
+    cout << "I am in main" << endl;
+    Example e1;
+    cout << "End of main" << endl;
+    f1();
+
     return 0;
 }

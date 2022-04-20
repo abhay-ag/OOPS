@@ -54,6 +54,12 @@ void f1(){
     cout << "I am in F1" << endl;
     Example e2;
 }
+
+// static object example
+void f2(){
+    static Example e3;      // scope of static object is till the program is finished executing
+    cout << "End of f1" << endl;
+}
 int main(){
     Point p1;
 
@@ -70,5 +76,10 @@ int main(){
     cout << "End of main" << endl;
     f1();
 
+    // static object
+
+    Example e4;
+    f2();
+    cout << "End of main" << endl;
     return 0;
 }

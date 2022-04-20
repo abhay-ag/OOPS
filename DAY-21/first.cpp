@@ -9,12 +9,14 @@ class Point{
     // we want the values of p1 into p2
     // for that we require the copy constructor
 
+    // default constructor made
     Point(){
         x = 0;
         y = 0;
     }
 
-    Point(Point &p){            // call by refernce for copy constructor
+    // const used to prevent from changing the values of x and y
+    Point(const Point &p){            // call by refernce for copy constructor
         x = p.x;
         y = p.y;
     }

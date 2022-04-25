@@ -18,6 +18,13 @@ class Complex{
         imag = j;
     }
 
+    // Copy Constructor
+
+    Complex(const Complex &obj){
+        real = obj.real;
+        imag = obj.imag;
+    }
+
     void disp() const{
         cout << real << " + " << imag << "i" << endl;
     }
@@ -32,5 +39,8 @@ int main() {
     c2.disp();      // 5 + 0i
     c3.disp();      // 5 + 10i
 
+    Complex c4 = c3;            // Copy constructor
+
+    c4.disp();
     return 0;
 }

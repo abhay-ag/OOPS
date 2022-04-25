@@ -42,6 +42,24 @@ class Complex{
     p = new int;
 */
 
+
+class Example{
+    int *p;
+
+    public:
+
+    Example(){      // dynamic constructor
+        p = new int;
+    }
+
+    void set(){
+        *p = 10;
+    }
+    void disp(){
+        cout << *p << " is stored at " << p << endl;
+    }
+};
+
 int main() {
     // default arguements are optional, and are always declared at the last after all required arguments are declared.
 
@@ -57,5 +75,10 @@ int main() {
 
     c4.disp();
     c5.disp();
+
+    Example e1;
+
+    e1.set();
+    e1.disp();
     return 0;
 }

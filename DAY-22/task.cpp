@@ -4,6 +4,25 @@ using namespace std;
 
 class B;
 
+/*
+    call by pointer in class objects: if dynamic memory allocated
+        1. calling (A &ob1, ......)
+        2. definition (A *ob1, ......)
+        3. accessing (*ob1->)
+
+    call by pointer in class objects: if compiler memory allocated
+             
+            //  declaration
+        Eg.: Example ob1;
+             Example *p;
+             
+            //  assigning
+             p = &ob1;
+
+            //  calling
+             cout << p-><data member name> ;
+*/
+
 class A{
     int *a;
 

@@ -36,6 +36,24 @@ class B{
         cout << "A==> " << *ob1.a << " B==> " << *ob2.b << endl;
     }
 
+    void min(A &ob1, B &ob2){
+        if(ob1.a > ob2.b){
+            cout << "B " << *ob2.b << " is minimum." << endl;
+        }
+    }
+
+    void max(A &ob1, B &ob2){
+        if(ob1.a > ob2.b){
+            cout << "A " << *ob1.a << " is maximum." << endl;
+        }
+    }
+
+    void mean(A &ob1, B &ob2){
+        int meanA = (*ob1.a + *ob2.b) /2;
+
+        cout << "Mean => " << meanA << endl;
+    }
+
     void disp(){
         cout << "B after swap " << *b << endl;
     }
@@ -64,6 +82,10 @@ int main(){
 
     a1.disp();
     b1.disp();
+
+    b1.min(a1, b1);
+    b1.max(a1, b1);
+    b1.mean(a1, b1);
 
     swaping(a1, b1);
 

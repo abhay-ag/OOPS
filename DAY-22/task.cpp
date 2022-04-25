@@ -2,17 +2,20 @@
 
 using namespace std;
 
+class B;
+
 class A{
     int *a;
 
     public:
+    friend void swaping(A &ob1, B &ob2);
     friend class B;
     A(int i = 0){
         a = new int;
         *a = i;
     }
     void disp(){
-        cout << *a << endl;
+        cout << "A after swap " << *a << endl;
     }
 };
 
@@ -20,6 +23,7 @@ class B{
     int *b;
 
     public:
+    friend void swaping(A &ob1, B &ob2);
     B(int j = 0){
         b = new int;
         *b = j;
@@ -33,9 +37,17 @@ class B{
     }
 
     void disp(){
-        cout << *b << endl;
+        cout << "B after swap " << *b << endl;
     }
 };
+
+void swaping(A &ob1, B &ob2){
+    int *temp = ob1.a;
+    ob1.a = ob2.b;
+    ob2.b = temp;
+
+    cout << "A==> " << *ob1.a << " B==> " << *ob2.b << endl;
+}
 
 int main(){
 
@@ -49,6 +61,11 @@ int main(){
     B b1(b);
 
     b1.swap(a1, b1);
+
+    a1.disp();
+    b1.disp();
+
+    swaping(a1, b1);
 
     a1.disp();
     b1.disp();

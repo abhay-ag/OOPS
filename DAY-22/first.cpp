@@ -30,6 +30,18 @@ class Complex{
     }
 };
 
+// dynamic memory --> memory allocated at runtime
+
+// allocated using "new" keyword
+// deallocated using "delete" keyboard
+
+/*
+    declaring dynamic memory
+
+    int *p;
+    p = new int;
+*/
+
 int main() {
     // default arguements are optional, and are always declared at the last after all required arguments are declared.
 

@@ -43,7 +43,7 @@ class B{
     }
 
     void min(A &ob1, B &ob2){
-        if(ob1.a > ob2.b){
+        if(*ob1.a > *ob2.b){
             cout << "B " << *ob2.b << " is minimum." << endl;
         }else{
             cout << "A " << *ob1.a << " is minimum." << endl;
@@ -51,7 +51,7 @@ class B{
     }
 
     void max(A &ob1, B &ob2){
-        if(ob1.a > ob2.b){
+        if(*ob1.a > *ob2.b){
             cout << "A " << *ob1.a << " is maximum." << endl;
         }else{
             cout << "B " << *ob2.b << " is maximum." << endl;
@@ -70,7 +70,7 @@ class B{
 };
 
 void min(A &ob1, B &ob2){
-    if(ob1.a > ob2.b){
+    if(*ob1.a > *ob2.b){
         cout << "B " << *ob2.b << " is minimum." << endl;
     }else{
         cout << "A " << *ob1.a << " is minimum." << endl;
@@ -78,7 +78,7 @@ void min(A &ob1, B &ob2){
 }
 
 void max(A &ob1, B &ob2){
-    if(ob1.a > ob2.b){
+    if(*ob1.a > *ob2.b){
         cout << "A " << *ob1.a << " is maximum." << endl;
     }else{
         cout << "B " << *ob2.b << " is maximum." << endl;

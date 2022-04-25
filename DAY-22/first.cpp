@@ -39,8 +39,11 @@ int main() {
     c2.disp();      // 5 + 0i
     c3.disp();      // 5 + 10i
 
-    Complex c4 = c3;            // Copy constructor
+    // two ways to call a copy constructor
+    Complex c4 = c3;            // Copy constructor FIRST WAY
+    Complex c5(c2);             // Copy constructor SECOND WAY
 
     c4.disp();
+    c5.disp();
     return 0;
 }

@@ -52,6 +52,19 @@ int main(){
     c1.show();
     c2.show();
     
+    /*
+        pre and post increment differnce
+
+        int a = 10, b, c;
+        
+        // if not assigning then they have the same meaning
+        // but
+
+        b = a++;        // means b = a => a = a+1;      // output: 10
+
+        c = ++a;        // means a = a+1 => c = a;      // output: 12;
+    */
+
     // pre and post increment or decrement; or any other operator; work only in in-built data-type;
     // to use them with our data-types: we need to use operator overloading;
     return 0;

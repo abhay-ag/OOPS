@@ -22,13 +22,28 @@ class Counter{
     // operator overloading
     
     // pre increment only
-    void operator ++(){
+    /*void operator ++(){
         count++;
-    }
+    }*/
 
     // post increment only
-    void operator ++(int){
+    /*void operator ++(int){
         count++;
+    }*/
+
+    // implementing assignment
+    Counter operator ++(){
+        Counter temp;
+
+        temp.count = ++count;
+        return temp;
+    }
+
+    Counter operator ++(int){
+        Counter temp;
+
+        temp.count = count++;
+        return temp;
     }
     void show() const{
         cout << "Counter: " << count << endl;
@@ -53,11 +68,14 @@ int main(){
 
 
     // operator overloading ==> increment
-    ++c1;
-    c1++;
+    // assignment
+    Counter c4 = c1++;
+    Counter c3 = ++c1;
 
     c1.show();
     c2.show();
+    c3.show();
+    c4.show();
     
     /*
         pre and post increment differnce

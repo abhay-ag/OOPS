@@ -21,7 +21,13 @@ class Counter{
     // =============== //
     // operator overloading
     
+    // pre increment only
     void operator ++(){
+        count++;
+    }
+
+    // post increment only
+    void operator ++(int){
         count++;
     }
     void show() const{
@@ -48,6 +54,7 @@ int main(){
 
     // operator overloading ==> increment
     ++c1;
+    c1++;
 
     c1.show();
     c2.show();

@@ -15,10 +15,19 @@ class Distance
         Distance temp;
         temp.feet = feet + d1.feet;
         temp.inches = inches + d1.inches;
-
-        if(temp.inches >= 12){
-            temp.inches -= 12;
-            temp.feet += 1;
+        
+        if(temp.inches % 12 == 0){
+            while (temp.inches != 0){
+                temp.inches -= 12;
+                temp.feet += 1;
+            }
+        }else{
+            while(!(temp.inches < 12)){
+                if(temp.inches >= 12){
+                    temp.inches -= 12;
+                    temp.feet += 1;
+                }
+            }
         }
 
         return temp;
@@ -30,8 +39,8 @@ class Distance
 };
 
 int main(){
-    Distance d1(5,12);
-    Distance d2(4,12);
+    Distance d1(5,11);
+    Distance d2(4,14);
 
     Distance d3 = d1 + d2;
 

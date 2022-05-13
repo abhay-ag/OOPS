@@ -36,6 +36,13 @@ class Test : Student{
 
 };
 
+// todo ==> 
+/*
+    test & sports => result  ==> multiple
+    student & test => result    ==> multilevel
+    student & test + sports => result ==> Hybrid
+*/
+
 int main(){
     Test s1;
     s1.get();

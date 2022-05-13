@@ -21,6 +21,16 @@ using namespace std;
         // can't access X ==> private
         // can access Y, Z
     }
+
+    the visiblity specifer defines the visiblity of the inherited members.
+    IMP: public can't change the visiblity specifiers of the inherited members;
+
+    Types of inheritence:
+        1. Single               A => B
+        2. Multiple             A & B => C
+        3. Multilevel           A => B => c
+        4. Hierarchical         A => B & C & D
+        5. Hybrid               A => B => C & D  || mixture of more than two inheritence types
 */
 int main(){
 

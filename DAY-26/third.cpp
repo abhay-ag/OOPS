@@ -11,17 +11,36 @@ using namespace std;
     eg: in operator overloading the compiler binds the operator on the basis of definition
 */
 
-class A{
-
-    public:
-    void show(){
-        cout << "Hello" << endl;
+class Shape{
+     public:
+    // void show(){
+    //     cout << "Hello" << endl;
+    // }
+    void draw(){
+        cout << "base class draw" << endl;
     }
 };
-int main(){
-    A obj, *p;
 
-    p = &obj;
-    p->show();
+class Rect:public Shape{
+    public:
+    void draw(){
+        cout << "rect class draw" << endl;
+    }
+};
+
+int main(){
+    // pointer objects
+    /*
+        A obj, *p;
+
+        p = &obj;
+        p->show();
+    */
+
+    Shape *b;
+    Rect r;
+
+    b = &r;         // base class pointer object can have the address of derived class object;
+    b->draw();      // irrespective of the value specified in b the result will always be of the draw() function of the base class is executed
     return 0;
 }

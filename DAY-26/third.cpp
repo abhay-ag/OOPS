@@ -16,7 +16,9 @@ class Shape{
     // void show(){
     //     cout << "Hello" << endl;
     // }
-    void draw(){
+    // solution of the problem to stop it from accesing through arrow operator
+    // use virtual function
+    virtual void draw(){
         cout << "base class draw" << endl;
     }
 };

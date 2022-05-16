@@ -25,6 +25,7 @@ class Shape{
 
     // pure virtual function virtual void draw() = 0;
     // class containing the virtual function is called abstract class;
+    // we can create no object of abstract class | pointer object can be created for late binding
     // in the derived class we do over-ride of the pure virtual function
 };
 

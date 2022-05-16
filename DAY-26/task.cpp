@@ -39,7 +39,7 @@ class Result:public Test, public Sports{
     public:
 
     Result(int mar1 = 0, int mar2 = 0, string nS = "", int r = 1, int sc = 0):Test(mar1, mar2, nS, r), Sports(sc){
-        avg = (mar1 + mar2 + sc) / 3;
+        avg = (m1 + m2 + score) / 3;
     }
 
     void showAvg(){

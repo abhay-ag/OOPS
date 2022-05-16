@@ -10,7 +10,18 @@ using namespace std;
 
     eg: in operator overloading the compiler binds the operator on the basis of definition
 */
-int main(){
 
+class A{
+
+    public:
+    void show(){
+        cout << "Hello" << endl;
+    }
+};
+int main(){
+    A obj, *p;
+
+    p = &obj;
+    p->show();
     return 0;
 }

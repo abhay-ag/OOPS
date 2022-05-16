@@ -21,6 +21,11 @@ class Shape{
     virtual void draw(){
         cout << "base class draw" << endl;
     }
+    // late binding ^^
+
+    // pure virtual function virtual void draw() = 0;
+    // class containing the virtual function is called abstract class;
+    // in the derived class we do over-ride of the pure virtual function
 };
 
 class Rect:public Shape{

@@ -36,5 +36,6 @@ int main(){
             1. Base executes first and last execution is of base.
             2. Child executes after and before the parent object dies.
     */
+    // in multiple inheritance the order of the class inheritence will be the order of the execution of the constructors of that class.
     return 0;
 }

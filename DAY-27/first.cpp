@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
-
+// Base Class || Abstract Class
 class Shape{
     public:
+    // pure virtual function
     virtual void area() = 0;
 };
 
+// Rectangle class inherits shape class
 class Rectangle:public Shape{
     int len, br;
     public:
@@ -13,11 +15,13 @@ class Rectangle:public Shape{
         len = length;
         br = breadth;
     }
+    // area function
     void area(){
         cout << "Area Rectangle: " << len * br << endl;
     }
 };
 
+// Triangle class inherits shape class
 class Triangle:public Shape{
     int ba, hei;
     public:
@@ -25,11 +29,13 @@ class Triangle:public Shape{
         ba = base;
         hei = height;
     }
+    // area function
     void area(){
         cout << "Area Triangle: " << 0.5 * ba * hei << endl;
     }
 };
 
+// Square class inherits shape class
 class Square:public Shape{
     int side;
     public:
@@ -37,23 +43,23 @@ class Square:public Shape{
     {
         side = side1;
     }
-
+    // area function
     void area(){
         cout << "Area Square: " << side * side << endl;
     }
 };
 
 int main(){
-    Shape *p;
-    Rectangle r(5, 4); Square s(5); Triangle t(2,5);
+    Shape *p;       // pointer object of base class created
+    Rectangle r(5, 4); Square s(5); Triangle t(2,5);        // objects created
 
-    p = &r;
+    p = &r;     // p points to area() of rectangle
     p->area();
 
-    p = &s;
+    p = &s;     // p points to area() of square
     p->area();
 
-    p = &t; 
+    p = &t;     // p points to area() of triangle
     p->area();
     return 0;
 }

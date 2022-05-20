@@ -1,6 +1,13 @@
 #include <iostream>
 using namespace std;
 
+struct ItemDet
+{
+    int item_price;
+    int item_name;
+};
+
+
 class Item{
     protected:
     int item_no, price;

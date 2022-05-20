@@ -1,48 +1,66 @@
 #include <iostream>
+#include <vector>
+#include <string.h>
 using namespace std;
 
 struct ItemDet
 {
-    int item_price;
-    int item_name;
+    int item_price, qty;
+    string item_name;
 };
 
 
 class Item{
     protected:
-    int item_no, price;
-    string name;
-
+    int n;
+    int tp;
+    vector <string> itNam;
+    vector <int> itPrice, price, quant;
     public:
-    Item(int srNo, int val, string nm){
-        item_no = srNo;
-        price = val;
-        name = nm;
+    Item(int totNum = 0){
+        tp = 0;
+        n = totNum;
+        ItemDet items[n];
+        string dummy;
+        for(int i = 0; i < n; i++){
+            cout << "Enter the price of the item: ";
+            cin >> items[i].item_price;
+            getline(cin, dummy);
+            cout << "Enter the name of the item: ";
+            getline(cin, items[i].item_name);
+            cout << "Enter the quantity of the item: ";
+            cin >> items[i].qty;
+
+            tp += items[i].item_price * items[i].qty;
+            itNam.push_back(items[i].item_name);
+            itPrice.push_back(items[i].item_price);
+            price.push_back(items[i].item_price * items[i].qty);
+            quant.push_back(items[i].qty);
+        }
     }
 };
 class Discounted_Item : public Item{
-    int qty, tp, tpd;
-    float discount;
+    float discount;float totDiscPrice;
+    vector <float> discPrice;
     public:
-    Discounted_Item(int quant,int _srNo, int _val, string _name):Item(_srNo, _val, _name){
+    Discounted_Item(int tot):Item(tot){
+        totDiscPrice = 0;
         discount = 0.25;
-        qty = quant;
+        for(int i = 0; i < n; i++){
+            discPrice.push_back(price.at(i) - discount * price.at(i));
+            totDiscPrice += price.at(i) - discount * price.at(i);
+        }
     }
-
-    void tp_disc(){
-        tp = price * qty;
-
-        tpd = tp - discount*tp;
-    }
-
     void print_bill() const{
-        cout << item_no << ". \t" << name << "\t\tPrice: " << price <<"\t\t Qty: " << qty << "\t\tTot. Price: " << tp << "\t\tDisc. Price: " << tpd << endl;
+        cout << "Sr. No.\tItem\t\tItem Price\t\tQty.\t\tTotal Price\tDiscounted Price"<< endl;
+        for(int i = 0; i < n; i++){
+            cout << i+1 << ".\t" << itNam.at(i) << "\t" << itPrice.at(i) << "\t\t\t" << quant.at(i) << "\t\t" << price.at(i) << "\t\t" << discPrice.at(i) << endl;
+        }
     }
 };
 
 int main(){
-    Discounted_Item d1(5, 1, 100, "Dairy Milk Silk");
-    d1.tp_disc();
+    Discounted_Item d1(2);
     d1.print_bill();
     return 0;
 }

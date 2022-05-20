@@ -56,6 +56,12 @@ class Discounted_Item : public Item{
         for(int i = 0; i < n; i++){
             cout << i+1 << ".\t" << itNam.at(i) << "\t" << itPrice.at(i) << "\t\t\t" << quant.at(i) << "\t\t" << price.at(i) << "\t\t" << discPrice.at(i) << endl;
         }
+        cout << endl << endl;
+        cout << "****************" << endl;
+        cout << "Total Price: " << tp << endl;
+        cout << "****************" << endl;
+        cout << "Discounted Price: " << totDiscPrice << endl; 
+        cout << "****************" << endl;
     }
 };
 

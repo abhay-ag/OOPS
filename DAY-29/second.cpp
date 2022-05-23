@@ -23,10 +23,11 @@ int main(){
             cout << "Result: " << a/b;
         }
     }
-    // catch(int b)    // type mismatch
-    catch(float b)
+    catch(int b)    // type mismatch
     {   
         cout << "Divisor can't be zero" << endl;
+    }catch(...){    // this will be executed
+        cout << "Default Exception" << endl;
     }
     
     return 0;

@@ -11,5 +11,23 @@ using namespace std;
 // catch all block catch(...) syntax || multiple catch statements can be there for one throw; 
 
 int main(){
+    float a, b;
+
+    cin >> a >> b;
+
+    try
+    {
+        if(b == 0){
+            throw b;
+        }else{
+            cout << "Result: " << a/b;
+        }
+    }
+    // catch(int b)    // type mismatch
+    catch(float b)
+    {   
+        cout << "Divisor can't be zero" << endl;
+    }
+    
     return 0;
 }

@@ -26,6 +26,9 @@ class Example{
     template <class T>      ==> where T is a generic type
 */
 
+// setting up multiple class templates: template <class T, class U>
+// declaring the respective object will be like: Example <int, float> <obj name>
+
 int main(){
     // declaring objects
     // <class name> <dtype><object name>

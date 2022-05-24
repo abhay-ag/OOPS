@@ -29,6 +29,10 @@ class Example{
 // setting up multiple class templates: template <class T, class U>
 // declaring the respective object will be like: Example <int, float> <obj name>
 
+// class template with multiple parameters and default parameters
+// template <class T, class U = float>
+// when an object is made corresponding to the same class then U will be float by default and need not be passed as a parameter.
+
 int main(){
     // declaring objects
     // <class name> <dtype><object name>

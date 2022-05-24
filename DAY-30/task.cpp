@@ -22,7 +22,7 @@ class Calculate{
 
 int main(){
     Calculate <int>c1;Calculate <float>c2;Calculate <double>c3;
-    cout << c1.sum(5,4) << endl;
+    cout << c1.sum(5,4.3) << endl;
     cout << c2.sum(5.1,4.4) << endl;
     cout << c3.sum(5.75474573,4.890324098234) << endl;
     cout << c1.mul(5,4) << endl;

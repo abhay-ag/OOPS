@@ -38,7 +38,7 @@ int main(){
 
     /*
         1. size() -> return the total number of elements in the vector
-        2. capacity() -> always expandable and grows in the power of 2^<last_index> && equal or greater than the size of vector.
+        2. capacity() -> always expandable and grows in the power of 2^<starting from zero> && equal or greater than the size of vector && doesn't increase if the size < capacity else increase in the last power of 2.
     */
     return 0;
 }

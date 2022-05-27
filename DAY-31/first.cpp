@@ -13,6 +13,13 @@ using namespace std;
 int main(){
     int n;
     vector <int> rNo;
+    // vector is dynamic and grows according to the user requirement.
+    cout << rNo.size() << endl;
+    
+    // vector <int> <ob_name> (size, value to be filled)
+    vector <int>v1(5, 10);
+    cout << v1.size() << endl;
+
     for(int i = 0; i < 5; i++){
         cin >> n;
         rNo.push_back(n);

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 // Standard Template Library || STL
@@ -10,5 +11,14 @@ using namespace std;
         3. Iterators    ==> pointers (to traverse any container or iterate over any container)
 */
 int main(){
+    int n;
+    vector <int> rNo;
+    for(int i = 0; i < 5; i++){
+        cin >> n;
+        rNo.push_back(n);
+    }
+    for(int i = 0; i<5; i++){
+        cout << rNo.at(i) << endl;
+    }
     return 0;
 }

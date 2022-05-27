@@ -35,5 +35,10 @@ int main(){
         4. v1.back() --> return the last element of the vector
         5. int *p = v1.data() --> return the starting index of vector
     */
+
+    /*
+        1. size() -> return the total number of elements in the vector
+        2. capacity() -> always expandable and grows in the power of 2^<last_index> && equal or greater than the size of vector.
+    */
     return 0;
 }

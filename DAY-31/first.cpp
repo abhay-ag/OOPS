@@ -15,7 +15,7 @@ int main(){
     vector <int> rNo;
     // vector is dynamic and grows according to the user requirement.
     cout << rNo.size() << endl;
-    
+
     // vector <int> <ob_name> (size, value to be filled)
     vector <int>v1(5, 10);
     cout << v1.size() << endl;
@@ -27,5 +27,13 @@ int main(){
     for(int i = 0; i<5; i++){
         cout << rNo.at(i) << endl;
     }
+    // ways to access the elements of a vector
+    /*
+        1. v1[<index>] -> first type
+        2. v1.at(<index>) -> second type
+        3. v1.front()   --> return the first element of the vector
+        4. v1.back() --> return the last element of the vector
+        5. int *p = v1.data() --> return the starting index of vector
+    */
     return 0;
 }

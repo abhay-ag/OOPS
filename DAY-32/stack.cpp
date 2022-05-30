@@ -8,7 +8,7 @@ int main(){
     s1.push(5);
     s1.push(4);
 
-    while(!s1.empty()){
+    while(!(s1.size() == 0)){
         cout << s1.top() << endl;
         s1.pop();
     }
